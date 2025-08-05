@@ -62,6 +62,7 @@ class Agent():
     }
 
   def _custom_rag_node(self, state: AgentState):
+    print("Inside custom RAG node")
     query = state.get("query", "")
     result = nascar_rag_tool.invoke(query)
     last_message = state.get("current_messages", [])[-1]

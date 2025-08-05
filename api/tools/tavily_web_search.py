@@ -6,12 +6,12 @@ def _tavily_search(query: str, max_results: int = 8) -> str:
   _client = TavilySearch(
     api_key=os.environ.get("NEXT_PUBLIC_TAVILY_KEY"), 
     max_results=max_results,
-    topic="news",
     include_domains=[
       "nascar.com",
       "racing-reference.info",
-      "racingcircuits.info"
-    ]
+      "racingcircuits.info",
+      "jayski.com",
+    ],
   )
   results = _client.invoke({"query": query})
   if not results["results"]:

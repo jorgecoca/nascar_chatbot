@@ -6,6 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from agent import Agent
 from services.chat_service import ChatService
+from services.documents_loader_service import DocumentsLoaderService
 from models.chat_request import ChatRequest
 
 load_dotenv()
