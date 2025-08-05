@@ -34,7 +34,7 @@ async def chat(request: ChatRequest):
   try:
     return await chat_service.chat(request.user_message)
   except Exception as e:
-    raise HTTPException(status_code=500, detail=f"Chat Endpoint: {str(e)}")
+    raise HTTPException(status_code=500, detail=e)
 
 if __name__ == "__main__":
   uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -27,12 +27,12 @@ class Agent():
   def _should_continue(self, state: AgentState):
     current = state.get("current_messages", [])
     last_message = current[-1] if current else None
-    # if last_message and hasattr(last_message, "tool_calls"):
-    #     for call in last_message.tool_calls:
-    #         if call["name"] == "tavily_web_search":
-    #             return "web_search"
-    #         elif call["name"] == "custom_rag_tool":
-    #             return "custom_rag"
+    if last_message and hasattr(last_message, "tool_calls"):
+      for call in last_message.tool_calls:
+        if call["name"] == "tavily_web_search":
+          return "web_search"
+        elif call["name"] == "custom_rag_tool":
+          return "custom_rag"
     return END
 
   def _call_llm_node(self, state: AgentState):
@@ -46,7 +46,7 @@ class Agent():
   
   def _web_search_node(self, state: AgentState):
     query = state.get("query", "")
-    result = tavily_web_search_tool.invoke(query)
+    result = tavily_web_search_tool.invoke(query.content)
     last_message = state.get("current_messages", [])[-1]
     tool_calls = getattr(last_message, "tool_calls", [])
     messages = [

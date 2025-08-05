@@ -25,15 +25,14 @@ class ChatService():
 
       if self.agent.graph:
         async for chunk in self.agent.graph.astream(inputs, stream_mode="updates"):
-          for node, values in chunk.items():
-              if "current_messages" in values:
-                for msg in values["current_messages"]:
-                  final_current_messages.append(msg)
-                  # Extract tool calls if they exist in AssistantMessage
-                  if hasattr(msg, "tool_calls") and msg.tool_calls:
-                    tool_calls.extend(msg.tool_calls)
-              if "response" in values:
-                final_response = values["response"]
+          for _, values in chunk.items():
+            if "current_messages" in values:
+              for msg in values["current_messages"]:
+                final_current_messages.append(msg)
+                if hasattr(msg, "tool_calls") and msg.tool_calls:
+                  tool_calls.extend(msg.tool_calls)
+            if "response" in values:
+              final_response = values["response"]
       return {
         "response": final_response,
         "messages": final_current_messages,

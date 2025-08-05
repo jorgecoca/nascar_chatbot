@@ -3,8 +3,17 @@ from langchain_core.tools import Tool
 from langchain_tavily import TavilySearch
 
 def _tavily_search(query: str, max_results: int = 5) -> str:
-  _client = TavilySearch(api_key=os.environ.get("NEXT_PUBLIC_TAVILY_KEY"))
-  results = _client.search(query=query, max_results=max_results)
+  _client = TavilySearch(
+    api_key=os.environ.get("NEXT_PUBLIC_TAVILY_KEY"), 
+    max_results=max_results,
+    topic="news",
+    include_domains=[
+      "nascar.com",
+      "racing-reference.info",
+      "racingcircuits.info"
+    ]
+  )
+  results = _client.invoke({"query": query})
   if not results["results"]:
       return "No results were found for your query when using Tavily."
   summaries = []
