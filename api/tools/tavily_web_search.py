@@ -2,7 +2,7 @@ import os
 from langchain_core.tools import Tool
 from langchain_tavily import TavilySearch
 
-def _tavily_search(query: str, max_results: int = 5) -> str:
+def _tavily_search(query: str, max_results: int = 8) -> str:
   _client = TavilySearch(
     api_key=os.environ.get("NEXT_PUBLIC_TAVILY_KEY"), 
     max_results=max_results,
