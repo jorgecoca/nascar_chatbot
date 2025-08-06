@@ -4,6 +4,7 @@ version = "0.0.1"
 readme = "../README.md"
 requires-python = ">=3.13.4"
 dependencies = [
+  "jupyter>=1.1.1",
   "fastapi>=0.115.12",
   "pydantic>=2.11.4",
   "uvicorn>=0.34.2",
@@ -15,5 +16,6 @@ dependencies = [
   "langchain-tavily>=0.2.11",
   "langchain-qdrant>=0.2.0",
   "pymupdf>=1.26.3",
-  "python-dotenv"
+  "python-dotenv",
+  "ragas==0.2.10",
 ]
