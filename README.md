@@ -43,7 +43,7 @@ When more up-to-date data is needed (eg. fetch the winner of the latest race), i
 
 ### Task 4. RAG prototype
 
-See video attached:
+See video attached (`nascar-bot.mp4`)
 
 <video width="320" height="240" controls>
   <source src="./nascar-bot.mp4" type="video/mp4">
