@@ -21,9 +21,14 @@ npm run dev
 
 ## Deliverables
 
-[Loom video here](https://www.loom.com/share/8a6c22e2cd8845959706952937751468?sid=54b8481f-9b8f-49cd-a1e4-c668cb6d7bfb)
-
-<div style="position: relative; padding-bottom: 64.86486486486486%; height: 0;"><iframe src="https://www.loom.com/embed/8a6c22e2cd8845959706952937751468?sid=e3ead185-4ef6-4b63-96e3-ce046d226d2e" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<div>
+  <a href="https://www.loom.com/share/8a6c22e2cd8845959706952937751468">
+    <p>Creating a NASCAR Chatbot for VIP Guests at Races 🚗 - Watch Video</p>
+  </a>
+  <a href="https://www.loom.com/share/8a6c22e2cd8845959706952937751468">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/8a6c22e2cd8845959706952937751468-eb539691ac3ef9ff-full-play.gif">
+  </a>
+</div>
 
 ### Task 1. Defining your problem and audience
 
