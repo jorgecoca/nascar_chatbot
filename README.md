@@ -21,6 +21,10 @@ npm run dev
 
 ## Deliverables
 
+[Loom video here](https://www.loom.com/share/8a6c22e2cd8845959706952937751468?sid=54b8481f-9b8f-49cd-a1e4-c668cb6d7bfb)
+
+<div style="position: relative; padding-bottom: 64.86486486486486%; height: 0;"><iframe src="https://www.loom.com/embed/8a6c22e2cd8845959706952937751468?sid=e3ead185-4ef6-4b63-96e3-ce046d226d2e" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 ### Task 1. Defining your problem and audience
 
 NASCAR celebrates a multitude of racing events across North America, with thousands of different guests on each race. Racing teams invite VIP guests to their team pits to enjoy the race; these VIPs are usually representatives of sponsors or other celebrities that might have a commercial interest in the race, but are not, generally speaking, well versed in the rules, regulations, history or race details of NASCAR, making their VIP experience sometimes not worth the time of the race, or not as pleasant as it could be.
