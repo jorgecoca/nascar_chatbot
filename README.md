@@ -52,3 +52,7 @@ See video attached:
 ### Task 5. Test the agent using RAG evaluation methods
 
 See `api/sandbox.ipynb` to check the different the different test criteria.
+
+See also the integration with LangSmith:
+
+![langsmith](./langsmith.png)
