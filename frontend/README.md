@@ -6,6 +6,7 @@ A Next.js frontend application for the NASCAR ChatBot, featuring a racing-themed
 
 - **Racing-themed UI**: NASCAR-inspired design with racing colors, checkered patterns, and animated elements
 - **Real-time Chat**: Interactive chat interface with the NASCAR AI agent
+- **Markdown Support**: Full markdown rendering for rich AI responses including headers, lists, code blocks, tables, and links
 - **Responsive Design**: Mobile-friendly design that works across devices
 - **API Health Monitoring**: Visual indicators for backend API status
 - **Racing Animations**: Custom CSS animations including race car loading indicators
@@ -18,6 +19,8 @@ A Next.js frontend application for the NASCAR ChatBot, featuring a racing-themed
 - **Tailwind CSS v4**: Utility-first CSS framework with custom racing theme
 - **Lucide React**: Beautiful icons
 - **Axios**: HTTP client for API communication
+- **React Markdown**: Full markdown rendering with GitHub Flavored Markdown support
+- **Remark GFM**: Enhanced markdown features (tables, strikethrough, etc.)
 
 ## Getting Started
 
@@ -108,6 +111,28 @@ export const API_CONFIG = {
   }
 };
 ```
+
+## Markdown Support
+
+The chat interface now fully supports markdown formatting for AI responses:
+
+### Supported Elements
+- **Headers** (H1-H6) with NASCAR yellow highlighting
+- **Bold** and *italic* text formatting
+- `Inline code` with racing-themed styling
+- Code blocks with syntax highlighting
+- Bulleted and numbered lists
+- Tables with NASCAR-themed borders
+- Blockquotes with yellow accent borders
+- Links that open in new tabs
+- Strikethrough text
+
+### NASCAR Theme Integration
+- Headers use NASCAR yellow (#FFD700)
+- Code blocks have dark backgrounds with racing borders
+- Tables feature red accent headers
+- Links hover with racing yellow
+- All elements maintain the dark racing theme
 
 ## Racing Theme Features
 

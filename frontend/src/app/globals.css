@@ -74,3 +74,104 @@ body {
 .chat-scroll::-webkit-scrollbar-thumb:hover {
   background: #b91c28;
 }
+
+/* Markdown styling for NASCAR theme */
+.prose-nascar {
+  color: #f3f4f6;
+}
+
+.prose-nascar h1,
+.prose-nascar h2,
+.prose-nascar h3,
+.prose-nascar h4,
+.prose-nascar h5,
+.prose-nascar h6 {
+  color: #ffd700;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-nascar p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.prose-nascar ul,
+.prose-nascar ol {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+
+.prose-nascar li {
+  margin-bottom: 0.25rem;
+}
+
+.prose-nascar strong {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.prose-nascar em {
+  color: #e5e7eb;
+  font-style: italic;
+}
+
+.prose-nascar code {
+  background-color: rgba(31, 41, 55, 0.5);
+  color: #ffd700;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+
+.prose-nascar pre {
+  background-color: rgba(31, 41, 55, 0.8);
+  border: 1px solid #4b5563;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  overflow-x: auto;
+  margin: 0.5rem 0;
+}
+
+.prose-nascar pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: #f3f4f6;
+}
+
+.prose-nascar blockquote {
+  border-left: 4px solid #ffd700;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #d1d5db;
+  margin: 0.5rem 0;
+}
+
+.prose-nascar a {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.prose-nascar a:hover {
+  color: #fbbf24;
+}
+
+.prose-nascar table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+}
+
+.prose-nascar th,
+.prose-nascar td {
+  border: 1px solid #4b5563;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.prose-nascar th {
+  background-color: rgba(229, 30, 44, 0.2);
+  color: #ffd700;
+  font-weight: 600;
+}

@@ -10,3 +10,11 @@ We aim to create a NASCAR educational chatbot for VIP guests that can be consult
 cd api
 uv sync
 ```
+
+## Frontend
+
+```
+cd frontend
+npm i
+npm run dev
+```

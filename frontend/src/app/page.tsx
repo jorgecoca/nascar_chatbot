@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { Send, Flag, Zap, MessageSquare } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { ChatMessage, RACING_THEME } from '@/lib/config';
 import { chatAPI } from '@/lib/api';
 import { RaceTrackLoading } from '@/components/RacingComponents';
@@ -134,9 +136,38 @@ export default function Home() {
                       <span className="text-yellow-400 font-semibold text-sm">NASCAR Bot</span>
                     </div>
                   )}
-                  <p className="whitespace-pre-wrap leading-relaxed">
-                    {message.content}
-                  </p>
+                  {message.type === 'bot' ? (
+                    <div className="prose-nascar">
+                      <ReactMarkdown 
+                        remarkPlugins={[remarkGfm]}
+                        components={{
+                          // Customize markdown elements for racing theme
+                          h1: ({children}) => <h1 className="text-yellow-400 font-bold text-lg mb-2">{children}</h1>,
+                          h2: ({children}) => <h2 className="text-yellow-300 font-semibold text-base mb-2">{children}</h2>,
+                          h3: ({children}) => <h3 className="text-yellow-300 font-medium text-sm mb-1">{children}</h3>,
+                          p: ({children}) => <p className="mb-2 last:mb-0 leading-relaxed text-gray-100">{children}</p>,
+                          ul: ({children}) => <ul className="list-disc list-inside mb-2 space-y-1 pl-4">{children}</ul>,
+                          ol: ({children}) => <ol className="list-decimal list-inside mb-2 space-y-1 pl-4">{children}</ol>,
+                          li: ({children}) => <li className="text-gray-100">{children}</li>,
+                          strong: ({children}) => <strong className="text-yellow-300 font-semibold">{children}</strong>,
+                          em: ({children}) => <em className="text-gray-200 italic">{children}</em>,
+                          code: ({children}) => <code className="bg-gray-900/50 text-yellow-300 px-1 py-0.5 rounded text-xs font-mono">{children}</code>,
+                          pre: ({children}) => <pre className="bg-gray-900/70 p-3 rounded-lg overflow-x-auto text-sm border border-gray-600 my-2">{children}</pre>,
+                          blockquote: ({children}) => <blockquote className="border-l-4 border-yellow-400 pl-4 italic text-gray-200 my-2">{children}</blockquote>,
+                          a: ({href, children}) => <a href={href} className="text-yellow-400 hover:text-yellow-300 underline transition-colors" target="_blank" rel="noopener noreferrer">{children}</a>,
+                          table: ({children}) => <table className="w-full border-collapse border border-gray-600 my-2">{children}</table>,
+                          th: ({children}) => <th className="border border-gray-600 px-2 py-1 bg-red-600/20 text-yellow-300 font-semibold text-left">{children}</th>,
+                          td: ({children}) => <td className="border border-gray-600 px-2 py-1 text-gray-100">{children}</td>,
+                        }}
+                      >
+                        {message.content}
+                      </ReactMarkdown>
+                    </div>
+                  ) : (
+                    <p className="whitespace-pre-wrap leading-relaxed">
+                      {message.content}
+                    </p>
+                  )}
                   <div className="text-xs opacity-70 mt-2">
                     {message.timestamp.toLocaleTimeString()}
                   </div>
